@@ -1,8 +1,10 @@
 <html>
 
 <head>
-    <title>Trigonlyne</title>
+    <title>Galeria</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 </head>
 
 <body>
@@ -21,21 +23,36 @@
         </div>
     </header>
     <main>
-        <section class="galeria">
+        <section class="carousel-section">
+
             <div class="carousel">
 
-                <button class="btn prev">&#10094;</button>
+                <button class="carousel-btn prev" onclick="moveSlide(-1)">‹</button>
 
-                <div class="carousel-track">
-                    <img src="imagens/quadrado-preto.png" class="slide active">
-                    <img src="imagens/quadrado-preto.png" class="slide">
-                    <img src="imagens/quadrado-preto.png" class="slide">
-                    <img src="imagens/quadrado-preto.png" class="slide">
+                <div class="carousel-window">
+
+                    <div class="carousel-track" id="carouselTrack">
+
+                        <div class="slide">
+                            <img src="imagens/quadrado-preto.png">
+                        </div>
+
+                        <div class="slide">
+                            <img src="imagens/quadrado-preto.png">
+                        </div>
+
+                        <div class="slide">
+                            <img src="imagens/quadrado-preto.png">
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <button class="btn next">&#10095;</button>
+                <button class="carousel-btn next" onclick="moveSlide(1)">›</button>
 
             </div>
+
         </section>
     </main>
     <footer>
@@ -62,25 +79,39 @@
         <div class="footer-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, iure?</div>
     </footer>
     <script>
-        const track = document.querySelector('.carousel-track');
-        const slides = document.querySelectorAll('.slide');
-        const nextBtn = document.querySelector('.next');
-        const prevBtn = document.querySelector('.prev');
-
         let index = 0;
 
+        const track = document.getElementById("carouselTrack");
+        const slides = document.querySelectorAll(".slide");
+
         function updateCarousel() {
-            track.style.transform = `translateX(-${index * 100}%)`;
+            const width = track.parentElement.offsetWidth;
+            track.style.transform = `translateX(-${index * width}px)`;
         }
 
-        nextBtn.addEventListener('click', () => {
-            index = (index + 1) % slides.length;
+        function moveSlide(direction) {
+            index += direction;
+
+            if (index < 0) index = 0;
+            if (index >= slides.length) index = slides.length - 1;
+
             updateCarousel();
+        }
+
+        window.addEventListener("resize", updateCarousel);
+        updateCarousel();
+
+        let startX = 0;
+
+        track.addEventListener("touchstart", (e) => {
+            startX = e.touches[0].clientX;
         });
 
-        prevBtn.addEventListener('click', () => {
-            index = (index - 1 + slides.length) % slides.length;
-            updateCarousel();
+        track.addEventListener("touchend", (e) => {
+            let endX = e.changedTouches[0].clientX;
+
+            if (startX > endX + 50) moveSlide(1);
+            if (startX < endX - 50) moveSlide(-1);
         });
     </script>
 </body>
