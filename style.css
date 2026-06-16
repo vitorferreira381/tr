@@ -556,6 +556,28 @@
             margin-bottom: 10px;
         }
 
+        .card-topo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .acao-card {
+            background: rgb(183, 28, 28);
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: .9rem;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        .acao-card:hover {
+            background: rgb(140, 20, 20);
+            transform: translateY(-2px);
+        }
         /*========== MAPA ==========*/
 
         .mapa-section {
