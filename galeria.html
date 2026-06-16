@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <title>Trigonlyne</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><span>TRIGON</span>LYNE</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="galeria">
+            <div class="carousel">
+
+                <button class="btn prev">&#10094;</button>
+
+                <div class="carousel-track">
+                    <img src="imagens/quadrado-preto.png" class="slide active">
+                    <img src="imagens/quadrado-preto.png" class="slide">
+                    <img src="imagens/quadrado-preto.png" class="slide">
+                    <img src="imagens/quadrado-preto.png" class="slide">
+                </div>
+
+                <button class="btn next">&#10095;</button>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-titulo">
+                <h3>Trigonlyne</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+            <div class="footer-titulo">
+                <h3>Navegação</h3>
+                <p><a href="index.html">Início</a></p>
+                <p><a href="sobre.html">Sobre</a></p>
+                <p><a href="produtos.html">Produtos</a></p>
+                <p><a href="galeria.html">Galeria</a></p>
+                <p><a href="contato.html">Contato</a></p>
+            </div>
+            <div class="footer-titulo">
+                <h3>Atendimento</h3>
+                <p>Email</p>
+                <p>WhatsApp</p>
+                <p>Horário Comercial</p>
+            </div>
+        </div>
+        <div class="footer-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, iure?</div>
+    </footer>
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const slides = document.querySelectorAll('.slide');
+        const nextBtn = document.querySelector('.next');
+        const prevBtn = document.querySelector('.prev');
+
+        let index = 0;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            index = (index + 1) % slides.length;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            index = (index - 1 + slides.length) % slides.length;
+            updateCarousel();
+        });
+    </script>
+</body>
+
+</html>

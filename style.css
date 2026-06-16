@@ -1,0 +1,650 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+        }
+
+        /*==========HEADER==========*/
+        header {
+            background: rgb(183, 28, 28);
+            padding: 10px 10%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: rgb(255, 255, 255);
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: rgb(255, 193, 7);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        nav a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            color: rgb(255, 193, 7);
+        }
+
+        /*==========BANNER==========*/
+        .banner {
+            min-height: 100vh;
+            background: linear-gradient(to bottom right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("quadrado-preto.png");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+
+        .banner-conteudo {}
+
+        .banner h1 {
+            font-size: 4.5rem;
+            margin-bottom: 40px;
+        }
+
+        .banner p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+        }
+
+        .botao-tipo2 {
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgb(255, 193, 7);
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: 0.3s ease;
+        }
+
+        .botao-tipo2:hover {
+            transform: translateY(-4px);
+        }
+
+        /*==========PADRÃO DAS SEÇÕES==========*/
+        section {
+            padding: 100px 20%;
+        }
+
+        .section-titulo {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-titulo h2 {
+            color: rgb(183, 28, 28);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .section-titulo p {}
+
+        /*==========SOBRE==========*/
+        .sobre-inicio {
+            background: rgb(250, 250, 250);
+        }
+
+        .sobre-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sobre-img img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .sobre-texto h3 {
+            color: rgb(183, 28, 28);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .sobre-texto p {
+            margin-bottom: 20px;
+        }
+
+        .botao-tipo1 {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid rgb(183, 28, 28);
+            color: rgb(183, 28, 28);
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: 0.3s ease;
+        }
+
+        .botao-tipo1:hover {
+            background: rgb(183, 28, 28);
+            color: rgb(255, 255, 255);
+        }
+
+        /*==========PRODUTOS==========*/
+        .produtos-inicio {
+            background: rgb(255, 255, 255);
+        }
+
+        .produtos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .produto-cartao {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+            transition: 0.3s ease;
+        }
+
+        .produto-cartao:hover {
+            transform: translateY(-20px);
+        }
+
+        .produto-cartao img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .produto-conteudo {
+            padding: 20px;
+        }
+
+        .produto-conteudo h3 {
+            color: rgb(183, 28, 28);
+            margin-bottom: 10px;
+        }
+
+        .produto-conteudo p {}
+
+        /*==========DIFERENCIAIS==========*/
+        .diferenciais {
+            background: rgb(250, 250, 250);
+        }
+
+        .diferenciais-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .diferencial {
+            background: rgb(255, 255, 255);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        .diferencial-icone {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .diferencial h3 {
+            color: rgb(183, 28, 28);
+            margin-bottom: 10px;
+        }
+
+        .diferencial p {}
+
+        /*==========CONTATO==========*/
+        .contato-inicio {
+            background: rgb(255, 255, 255);
+        }
+
+        .contato-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .contato-cartao {
+            background: rgb(250, 250, 250);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        .contato-cartao h3 {
+            color: rgb(183, 28, 28);
+            margin-bottom: 10px;
+        }
+
+        .contato-cartao p {}
+
+        /*==========DEPOIMENTOS==========*/
+        .depoimentos {
+            background: rgb(250, 250, 250);
+        }
+
+        .depoimentos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .depoimento {
+            background: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        .estrelas {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .depoimento p {
+            margin-bottom: 10px;
+        }
+
+        .cliente {
+            font-weight: bold;
+            color: rgb(183, 28, 28);
+        }
+
+        /*==========CONVITE FINAL==========*/
+        .convite-final {
+            background: rgb(183, 28, 28);
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+
+        .convite-final h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .convite-final p {
+            margin: auto;
+            margin-bottom: 20px;
+        }
+
+        /*==========Produto Card==========*/
+        .produto-card {
+            position: relative;
+            min-height: 220px;
+            margin: 40px 10%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+            border-left: 5px solid rgb(183, 28, 28);
+            background: white;
+        }
+
+        .produto-conteudo {
+            width: 40%;
+            padding: 25px;
+            position: relative;
+            z-index: 3;
+            background: white;
+        }
+
+        .produto-conteudo img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .produto-conteudo h3 {
+            color: rgb(183, 28, 28);
+            margin-bottom: 10px;
+        }
+
+        .produto-imagem {
+            position: absolute;
+            inset: 0;
+        }
+
+        .produto-imagem img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .produto-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right,
+                    rgba(255, 255, 255, 1) 0%,
+                    rgba(255, 255, 255, 1) 35%,
+                    rgba(255, 255, 255, 0) 70%);
+            z-index: 1;
+        }
+
+        .produto-conteudo {
+            position: relative;
+            z-index: 3;
+            width: 30%;
+            padding: 25px;
+        }
+
+        /*==========carousel==========*/
+
+        .carousel {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.4s ease;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 550px;
+            object-fit: cover;
+        }
+
+        .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 2rem;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 8px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        @media (max-width: 768px) {
+
+            section {
+                padding: 40px 0;
+            }
+
+            .galeria {
+                padding: 0;
+            }
+
+            .carousel {
+                width: 100%;
+                max-width: 100%;
+                border-radius: 0;
+            }
+
+            .slide {
+                height: 350px;
+                width: 100%;
+            }
+        }
+
+        /*==========sobre nos==========*/
+        .sobre-nos {
+            background: #fafafa;
+            padding: 100px 10%;
+        }
+
+        .sobre-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .sobre-img img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .sobre-texto h2 {
+            font-size: 2.8rem;
+            color: rgb(183, 28, 28);
+            margin-bottom: 10px;
+        }
+
+        .sobre-texto .destaque {
+            color: rgb(255, 193, 7);
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .sobre-texto p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+
+            .sobre-nos {
+                padding: 60px 5%;
+            }
+
+            .sobre-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .sobre-texto h2 {
+                font-size: 2rem;
+            }
+
+        }
+
+
+        /*==========Contatos==========*/
+
+        .contato-tr {
+            background: linear-gradient(rgba(0, 0, 0, .65),
+                    rgba(0, 0, 0, .65)),
+                url("imagens/quadrado-preto.png");
+
+            background-size: cover;
+            background-position: center;
+
+            min-height: 40vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            color: white;
+        }
+
+        .contato-tr h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+        }
+
+        .contato-tr p {
+            font-size: 1.2rem;
+        }
+
+        .contato {
+            padding: 80px 10%;
+            background: rgb(250, 250, 250);
+        }
+
+        .contato-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        /*========== CARDS ==========*/
+
+        .info-contato {
+            display: grid;
+            gap: 20px;
+
+        }
+
+        .info-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+
+            border-left: 5px solid rgb(183, 28, 28);
+        }
+
+        .info-card img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .info-card h3 {
+            color: rgb(183, 28, 28);
+            margin-bottom: 10px;
+        }
+
+        /*========== MAPA ==========*/
+
+        .mapa-section {
+            padding: 0 10% 80px;
+        }
+
+        .mapa-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+
+            color: rgb(183, 28, 28);
+        }
+
+        .mapa-container {
+            overflow: hidden;
+
+            border-radius: 12px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .15);
+        }
+
+        .mapa-container iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+        }
+
+        @media (max-width: 768px) {
+
+            .contato h1 {
+                font-size: 2.2rem;
+            }
+
+            .contato {
+                padding: 50px 5%;
+            }
+
+            .info-card img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .contato-grid {
+                grid-template-columns: 2fr;
+            }
+
+            .mapa-section {
+                padding: 0 5% 50px;
+            }
+
+            .mapa-container iframe {
+                height: 300px;
+            }
+        }
+
+        /*==========FOOTER==========*/
+        footer {
+            background: rgb(10, 10, 10);
+            color: rgb(255, 255, 255);
+            padding: 40px 10%;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-titulo h3 {
+            margin-bottom: 20px;
+            color: rgb(255, 193, 7);
+        }
+
+        .footer-titulo p,
+        .footer-titulo a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: 0.3s ease;
+        }
+
+        .footer-titulo a:hover {
+            color: rgb(255, 193, 7);
+            text-decoration: underline;
+        }
+
+        .footer-base {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
+            padding-top: 20px;
+            text-align: center;
+        }
